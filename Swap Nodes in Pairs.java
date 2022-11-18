@@ -4,13 +4,13 @@ class Solution {
         {
             return head;
         }
-        ListNode p1 = head;
-        ListNode p2 = head.next;
-        ListNode p3 = p2.next;
-        p1.next = p3;
-        p2.next = p1;
-        if(p3 != null)
-        p1.next = swapPairs(p3);
-        return p2;
+        ListNode c1 = head;
+        ListNode c2 = head.next;
+        ListNode c3 = c2.next;
+        c1.next = c3;
+        c2.next = c1;
+        if(c3 != null)
+        c1.next = swapPairs(c3);
+        return c2;
     }
 }
