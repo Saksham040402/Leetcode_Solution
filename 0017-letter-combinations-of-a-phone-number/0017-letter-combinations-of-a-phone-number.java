@@ -17,8 +17,10 @@ class Solution {
         else{
             String digit=next_digits.substring(0,1);
             String letters=phone.get(digit);
+            // System.out.println(phone.get(digit));
             for(int i=0;i<letters.length();i++){
-                String letter=letters.substring(i,i+1);
+                // System.out.print(letters.charAt(i));
+                char letter=letters.charAt(i);
                 backtrack(combination+letter,next_digits.substring(1));
             }
         }
