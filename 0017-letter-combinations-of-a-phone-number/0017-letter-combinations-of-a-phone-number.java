@@ -1,5 +1,6 @@
 class Solution {
-    Map<String,String> phone=new HashMap<String,String>(){{
+    Map<String, String> map = new HashMap<>()
+    {{
         put("2","abc");
         put("3","def");
         put("4","ghi");
@@ -9,26 +10,27 @@ class Solution {
         put("8","tuv");
         put("9","wxyz");
     }};
-    List<String> output=new ArrayList<String>();
-    public void backtrack(String combination,String next_digits){
-        if(next_digits.length()==0){
-            output.add(combination);
+    List<String> list = new ArrayList<>();
+    private List<String> back(String com,String nxtdigit)
+    {
+        if(nxtdigit.length() == 0)
+        {
+            list.add(com);
+            return list;
         }
-        else{
-            String digit=next_digits.substring(0,1);
-            String letters=phone.get(digit);
-            // System.out.println(phone.get(digit));
-            for(int i=0;i<letters.length();i++){
-                // System.out.print(letters.charAt(i));
-                char letter=letters.charAt(i);
-                backtrack(combination+letter,next_digits.substring(1));
-            }
+        String s = nxtdigit.substring(0,1);
+        String letters = map.get(s);
+        for(int i = 0; i < letters.length();i++)
+        {
+            char letter = letters.charAt(i);
+            // nextdigit = nxtdigit.size()-1;
+            back(com+letter,nxtdigit.substring(1));
         }
+        return list;
     }
     public List<String> letterCombinations(String digits) {
-        if(digits.length()!=0){
-            backtrack("",digits);
-        }
-        return output;
+        if(digits.length() != 0)
+            back("",digits);
+        return list;
     }
 }
