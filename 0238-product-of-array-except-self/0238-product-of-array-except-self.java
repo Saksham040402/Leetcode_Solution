@@ -15,12 +15,12 @@ class Solution {
         {
             ar1[j] = nums[j+1]*ar1[j+1];
         }
-        for(int i = 0;i < nums.length;i++)
-        {
-            System.out.println(ar[i]);
-            System.out.println(ar1[i]);
+//         for(int i = 0;i < nums.length;i++)
+//         {
+//             System.out.println(ar[i]);
+//             System.out.println(ar1[i]);
 
-        }
+//         }
         // ar[0] =0;
         // ar1[nums.length-1] = 0;
         for(int i = 0; i < nums.length; i++)
