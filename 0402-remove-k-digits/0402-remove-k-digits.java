@@ -18,7 +18,6 @@ class Solution {
         
         for(int i = 0; i < sb.length()-1;i++)
         {
-            // System.out.println(sb.charAt(1));
             if((int)(sb.charAt(i))>(int)(sb.charAt(i+1))){
                 sb.delete(i,i+1);
                 i = -1;
@@ -28,10 +27,6 @@ class Solution {
                 break;
 
         }
-        // for(int i = 0; i<sb.length();i++)
-        // {
-        //     System.out.println(sb.charAt(i));
-        // }
         if(k!=0){
         for(int i = sb.length()-1; i >= 0; i--){
             sb.delete(i,i+1);
@@ -41,10 +36,6 @@ class Solution {
             
             }
         }
-        // for(int i = 0; i<sb.length();i++)
-        // {
-        //     System.out.println(sb.charAt(i));
-        // }
         for(int i = 0; i < sb.length(); i++){
             if(r==0){
                 if(sb.charAt(i) =='0'){
@@ -54,10 +45,7 @@ class Solution {
                 }
             }
             r++;
-            
-            // System.out.println(sb.charAt(i));
         }
-        // System.out.println(r);
         str = sb.toString();
         return str;
     }
