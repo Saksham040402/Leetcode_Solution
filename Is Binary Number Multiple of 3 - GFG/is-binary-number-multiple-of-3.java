@@ -20,9 +20,11 @@ class GfG
 }    
 // } Driver Code Ends
 
-class Solution{
 
-int isDivisible(String s) {
+//User function Template for Java
+
+class Solution {
+    int isDivisible(String s) {
     int sum = 0;
     for (int i = 0; i < s.length(); i++) {
         if (s.charAt(i) == '1') {
@@ -34,11 +36,6 @@ int isDivisible(String s) {
         }
     }
     
-    return (sum % 3) == 0 ? 1 : 0;
+    return sum % 3 == 0 ? 1 : 0;
 }
 }
-
-
-
-
-
