@@ -33,6 +33,5 @@ class Solution{
         m = (m & y);
         x = x | m;
         return x;
-        
     }
 }
