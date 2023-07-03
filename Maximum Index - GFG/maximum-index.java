@@ -30,13 +30,9 @@ class Solution {
         while(i<j){
             if(arr[i]<=arr[j]){
                 diff = Math.max(diff,j-i);
-                i++;
-                j=n-1;
+                i++;j=n-1;
             }
-            else {
-                j--;
-                
-            }
+            else {j--;}
         }
         return diff;
     }
