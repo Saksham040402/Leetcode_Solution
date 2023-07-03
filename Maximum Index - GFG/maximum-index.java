@@ -26,18 +26,18 @@ class Solution {
 
     int maxIndexDiff(int arr[], int n) {
         // code here
-          int i=0;
-          int j=n-1;
-          int res=0;
+          int i=0,j=n-1,diff=0;
         while(i<j){
             if(arr[i]<=arr[j]){
-                res = Math.max(res,j-i);
-                i++;j=n-1;
+                diff = Math.max(diff,j-i);
+                i++;
+                j=n-1;
             }
             else {
                 j--;
+                
             }
         }
-        return res;
+        return diff;
     }
 }
