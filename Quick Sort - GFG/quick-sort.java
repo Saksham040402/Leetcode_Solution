@@ -31,6 +31,7 @@ class Sorting
 // } Driver Code Ends
 
 
+
 class Solution {
 
 	static void swap(int[] arr, int i, int j)
@@ -58,15 +59,13 @@ class Solution {
 		return (i + 1);
 	}
 
-
 	static void quickSort(int[] arr, int low, int high)
 	{
 		if (low < high) {
 
-		
+
 			int pi = partition(arr, low, high);
 
-			
 			quickSort(arr, low, pi - 1);
 			quickSort(arr, pi + 1, high);
 		}
@@ -75,5 +74,4 @@ class Solution {
 
 	
 }
-
 
