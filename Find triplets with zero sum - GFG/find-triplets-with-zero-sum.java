@@ -33,7 +33,7 @@ class Solution
 	public boolean findTriplets(int arr[] , int n)
     {
         //add code here.
-         Arrays.sort(arr);
+        Arrays.sort(arr);
         for( int i = 0; i < n ; i++)
         {
         int j =i+1;
