@@ -34,6 +34,7 @@ class Solution
     int findK(int a[][], int m, int n, int num)
     {
 	// Your code here
+	// Your code here
 	   // A[][] = new int[n][m];
 	   // int a = 1;
 	   // for(int i = 0; i < n; i++){
@@ -44,17 +45,10 @@ class Solution
 	   // }
 	    int i, k = 0, l = 0;
  
-        /*  k - starting row index
-        m - ending row index
-        l - starting column index
-        n - ending column index
-        i - iterator
-        */
+       
         int count=1;
         while (k < m && l < n) {
-            // Print the first row from the remaining rows
             for (i = l; i < n; ++i) {
-                // System.out.print(a[k][i] + " ");
                 if(count==num){
                     return a[k][i];
                     // break;
@@ -63,10 +57,8 @@ class Solution
             }
             k++;
  
-            // Print the last column from the remaining
-            // columns
+            
             for (i = k; i < m; ++i) {
-                // System.out.print(a[i][n - 1] + " ");
                 if(count==num){
                     return a[i][n-1];
                     // break;
@@ -75,10 +67,8 @@ class Solution
             }
             n--;
  
-            // Print the last row from the remaining rows */
             if (k < m) {
                 for (i = n - 1; i >= l; --i) {
-                    // System.out.print(a[m - 1][i] + " ");
                     if(count==num){
                     return a[m-1][i];
                     // break;
@@ -88,11 +78,9 @@ class Solution
                 m--;
             }
  
-            // Print the first column from the remaining
-            // columns */
+            
             if (l < n) {
                 for (i = m - 1; i >= k; --i) {
-                    // System.out.print(a[i][l] + " ");
                     if(count==num){
                     return a[i][l];
                 }
