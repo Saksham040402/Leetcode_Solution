@@ -59,3 +59,4 @@ class Solution
         solve(s,sizeOfStack,(sizeOfStack+1)/2);
     } 
 }
+
