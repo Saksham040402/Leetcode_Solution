@@ -28,7 +28,7 @@ class Solution
     public String FirstNonRepeating(String A)
     {
         // code here
-       int n = A.length();
+        int n = A.length();
         int[] fast = new int[26];
         int[] first = new int[26];
         Arrays.fill(first, -1);
