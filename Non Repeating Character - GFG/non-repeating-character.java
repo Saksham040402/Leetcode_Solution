@@ -36,7 +36,8 @@ class Solution
     //Function to find the first non-repeating character in a string.
     static char nonrepeatingCharacter(String S)
     {
-         char arr[] = S.toCharArray();
+        //Your code here
+        char arr[] = S.toCharArray();
         HashMap<Character,Integer> h = new HashMap<Character,Integer>();
         for(int i = 0; i < arr.length;i++){
             h.put(arr[i],h.getOrDefault(arr[i],0)+1);
