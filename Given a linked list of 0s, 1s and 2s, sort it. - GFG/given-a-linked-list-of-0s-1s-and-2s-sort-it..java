@@ -84,28 +84,6 @@ class Solution
     static Node segregate(Node head)
     {
         // add your code here
-        // Node current = head, index = null;  
-        // int temp = 0;  
-        // if(head == null) {  
-        //     return;  
-        // }  
-        // else {  
-        //     while(current != null) {  
-                
-        //         index = current.next;  
-                  
-        //         while(index != null) {  
-        //             if(current.data > index.data) {  
-        //                 temp = current.data;  
-        //                 current.data = index.data;  
-        //                 index.data = temp;  
-        //             }  
-        //             index = index.next;  
-        //         }  
-        //         current = current.next;  
-        //     }      
-        // }
-        // return head;
         int arr[]=  new int[3];
         for(Node curr=head; curr!=null; curr=curr.next)
         {
@@ -135,9 +113,7 @@ class Solution
 
         }
         return head;
-        
     }
-    
 }
 
 
